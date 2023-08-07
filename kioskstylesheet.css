@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --red:#601a24
+    ;
+}
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;    
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border: none;
+
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #882812;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: var(--red);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #882812;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #882812;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: var(--red);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #882812;
+}
+
+html,body{
+    width: 99vw;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:rgb(90, 13, 13);
+    box-shadow: 0 0 1px #000000;
+}
+
+nav .logo{
+    align-items: center;
+    display: flex;
+    margin: 0 24px;
+}
+
+.logo .menu-icon{
+    color: #ffffff;
+    font-size: 35px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo .home-icon{
+    color: #ffffff;
+    font-size: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.logo .logoname{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+}
+nav .sidenavbar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;   
+    padding: 20px 0;
+    background:rgb(90, 13, 13);
+    box-shadow: 0 5px 10px #040303;
+    transition: all 0.4s ease;
+}
+
+nav.open .sidenavbar{
+    left: 0;
+}
+
+.sidenavbar .navbar-content{
+    padding: 20px 20px;
+}
+
+.navbar-content .list{
+    list-style: none;
+}
+
+.list .navlink{
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.lists .navlink:hover{
+    background-color: #e68576;
+}
+
+.navlink .icon{
+    margin-right: 16px;
+    font-size: 30px;
+    color:#ffffff;
+}
+
+.navlink .link{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.lists .navlink:hover .icon,
+.lists .navlink:hover .link{
+    color: rgb(0, 0, 0);
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    background: rgba(0, 0, 0, .3);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+nav.open ~ .overlay{
+    left: 260px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 6rem;
+}
+
+.home h1{
+    font-size: 30px;
+    padding-bottom: 2rem;
+    color: rgb(143, 114, 114);
+}
+
+.home h1 span{
+    color:var(--red);
+}
+
+#pupmap{
+    border: .2rem solid var(--red);
+}
+
+.box {
+    border: .2rem solid var(--red);
+    width: 200px;
+    height: 100px;
+    background-color: white;
+}
+
+#wrapper{
+    width: 20rem;
+    height: 15rem;
+}
+
+#wrapper img{
+    padding: 10px;
+    padding-bottom: 1px;
+    width: 19.5rem;
+    height: 10rem;
+}
+
+#wrapper h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#wrapper p{
+    padding: 5px;
+    padding-bottom: 1px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+#display{
+    position: absolute;
+    z-index: 5;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding-bottom: 3.5rem;
+}
+
+.heading span{
+    color: var(--red);
+}
+
+.puplogo{
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+
+.puplogo h1{
+    font-size: 40px;
+    color: rgb(143, 114, 114);
+    padding-top: 5rem;
+}
+
+.puplogo img{
+    margin-left: 34rem;
+    border: .5rem solid var(--red);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.puplogo p{
+    padding: 2rem;
+    margin: 10rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    border: .2rem solid var(--red);
+    border-radius: 7px;
+    background: #e68576;
+}
+
+.puphymn{
+    background-color: white;
+    padding: 1rem;
+    align-items: center;
+}
+
+.puphymn h1{
+    font-size: 40px;
+    padding-top: 5rem;
+    color: rgb(143, 114, 114);
+}
+
+.puphymn h3{
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    margin-left: 31.5rem;
+}
+
+.puphymn .square-container{
+    align-items: center;
+    display:block;
+    padding-top: 3rem;
+    padding-left: 24.5rem;
+    padding-right: 20rem;
+}
+
+.puphymn .box{
+    width: 40rem;
+    height: 43rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 26.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: .2rem solid var(--red);
+    border-radius: 7px;
+    background: #e68576;
+}
